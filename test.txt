@@ -2,3 +2,6 @@ echo "net.ipv4.conf.all.arp_ignore = 1" > /etc/sysctl.conf
 echo "net.ipv4.conf.lo.arp_ignore = 1" >> /etc/sysctl.conf
 echo "net.ipv4.conf.all.arp_announce = 2" >> /etc/sysctl.conf
 echo "net.ipv4.conf.lo.arp_announce = 2" >> /etc/sysctl.conf
+
+select * from mysql.user;
+gran all on *.* to 'admin'@'192.168.4.254' idendify by '123456'; 
